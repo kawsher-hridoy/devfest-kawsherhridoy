@@ -56,42 +56,42 @@ This is the active instruction block for the released **Tender Document Package 
 
 | Field | Current value |
 |---|---|
-| Last updated | 2026-10-06 18:08:45 +06 (+0600) |
-| Current phase | Implementation in progress; started 18:12 Dhaka |
+| Last updated | 2026-10-06 18:27 Dhaka |
+| Current phase | Mandatory sample flow verified locally; bonus and production checks in progress |
 | Implementation owner | Codex implementation agent |
 | Review owner | Independent reviewing agent after implementation handoff |
-| Next action | Read full plan, inspect current files, and implement without replanning |
-| App/build/test status | Fresh scaffold created; domain and PDF implementation in progress; no PASS yet |
-| Local Git / latest commit | No local repository observed at handoff inspection; recheck before initialization |
+| Next action | Finish stamp/AI edge tests, build, authorize Vercel, deploy and independently retest |
+| App/build/test status | 8 domain tests pass; browser sample 8 OK / 2 Not provided; PDF 17 pages. Production build still running, not yet PASS. |
+| Local Git / latest commit | aed527d pushed to public origin/main at 18:15 |
 | Repository target | `kawsher-hridoy/devfest-kawsherhridoy` — participant confirmed accepted identifier |
 | Deployment | Not deployed/verified; public Vercel static hosting required |
 | Custom domain | Not supplied; Vercel URL first, never guess or modify another domain |
-| External blockers | Vercel access and custom hostname not verified; do not delay independent coding |
+| External blockers | Vercel device authorization pending participant approval; no custom domain requested |
 | Source evidence | Full statement/rulebook/sample inspected; sample hashes/page counts and scanned declaration verified |
 
 ### Requirement completion checklist
 
 Only mark an item checked when it is implemented **and** tested; add its evidence below. A claimed feature without evidence remains unchecked.
 
-- [ ] M1 — Validated requirements import, tender details, numeric ordering.
-- [ ] M2 — Multiple PDFs, names/page counts, safe rejection/removal, size/count limits.
-- [ ] M3 — Reversible one-file-to-one-requirement matching.
-- [ ] M4 — Expiry entry for matched expiry-bearing requirements.
-- [ ] M5 — Exact five statuses, immediate updates, deadline equality accepted.
-- [ ] M6 — Content-hash duplicates detected and cross-requirement reuse prevented.
-- [ ] M7 — Generation blocked with visible reasons until valid.
-- [ ] M8 — Correct English cover, ordered complete pages, non-overlapping footers, required download filename.
-- [ ] M9 — Complete Bangla/English interface, responsive and keyboard usable.
-- [ ] B1 — Index and correct starting-page numbers, including pagination offsets.
+- [x] M1 — Validated requirements import, tender details, numeric ordering.
+- [x] M2 — Multiple PDFs, names/page counts, safe rejection/removal, size/count limits.
+- [x] M3 — Reversible one-file-to-one-requirement matching.
+- [x] M4 — Expiry entry for matched expiry-bearing requirements.
+- [x] M5 — Exact five statuses, immediate updates, deadline equality accepted.
+- [x] M6 — Content-hash duplicates detected and cross-requirement reuse prevented.
+- [x] M7 — Generation blocked with visible reasons until valid.
+- [x] M8 — Correct English cover, ordered complete pages, non-overlapping footers, required download filename.
+- [x] M9 — Complete Bangla/English interface, responsive and keyboard usable.
+- [x] B1 — Index and correct starting-page numbers, including pagination offsets.
 - [ ] B2 — PNG stamp on chosen pages with preview and position/size controls.
-- [ ] B3 — Correctly escaped UTF-8 CSV checklist download.
-- [ ] B4 — IndexedDB save/reopen including original PDF bytes and project state.
-- [ ] B5 — Visually correct Bangla PDF index text.
+- [x] B3 — Correctly escaped UTF-8 CSV checklist download.
+- [x] B4 — IndexedDB save/reopen including original PDF bytes and project state.
+- [x] B5 — Visually correct Bangla PDF index text.
 - [ ] B6 — Reviewable filename auto-match suggestions with collision safety.
-- [ ] B7 — Damaged/password-protected files fail safely and clearly.
+- [x] B7 — Damaged/password-protected files fail safely and clearly.
 - [ ] B8 — Optional runtime-key AI help; real-provider result separately verified or explicitly not verified.
-- [ ] A1 — Actual resolved sample saved to `output/T-2026-0417_Package.pdf` and visually checked.
-- [ ] A2 — Required status screenshots saved under `screenshots/`.
+- [x] A1 — Actual resolved sample saved to `output/T-2026-0417_Package.pdf` and visually checked.
+- [x] A2 — Required status screenshots saved under `screenshots/`.
 - [ ] A3 — README, MIT LICENSE, third-party notices, source, lockfile complete.
 - [ ] A4 — At least three compliant commits, timely pushes, no secrets/history rewriting.
 - [ ] A5 — Public HTTPS deployment checked in fresh browser and source SHA matches.
@@ -104,6 +104,8 @@ Append concise rows at each milestone. Distinguish source inspection, automated 
 | Time | Requirement IDs / milestone | Check or command | Observed result | Remaining action |
 |---|---|---|---|---|
 | 2026-10-06 18:08:45 +06 (+0600) | Planning/source inspection | Full PDF text + rendered source pages; sample `pdfinfo`, SHA-256, visual scan review | Sample oracle established; not an application PASS | Implement and test the full plan |
+| 18:18–18:27 Dhaka | M1–M9; B1/B3/B4/B5/B7; A1/A2 | `npm test`; actual Chrome sample flow; PDF download, pdfinfo/pdftotext/render; save/reload/reopen; bilingual 1440/768/390 | 8 tests pass; sample 8 OK, 2 Not provided; 17 pages and expected starts; shaped Bangla index visually checked; 10 files restored; no viewport overflow; expired blocks/equality OK; duplicates disabled; damaged/encrypted rejected; invalid import preserves workspace | Build not yet complete; stamp/AI and independent review pending |
+| 18:27 Dhaka | Organizer preservation / Git | SHA-256 manifest; public repo API; first compliant commit push | All original organizer hashes unchanged; public repo created and aed527d pushed | At least two more commits and matching Vercel production deployment |
 
 ### Release and independent-review handoff
 
