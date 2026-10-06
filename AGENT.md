@@ -56,17 +56,17 @@ This is the active instruction block for the released **Tender Document Package 
 
 | Field | Current value |
 |---|---|
-| Last updated | 2026-10-06 18:27 Dhaka |
+| Last updated | 2026-10-06 18:38 Dhaka |
 | Current phase | Mandatory sample flow verified locally; bonus and production checks in progress |
 | Implementation owner | Codex implementation agent |
 | Review owner | Independent reviewing agent after implementation handoff |
-| Next action | Finish stamp/AI edge tests, build, authorize Vercel, deploy and independently retest |
-| App/build/test status | 8 domain tests pass; browser sample 8 OK / 2 Not provided; PDF 17 pages. Production build still running, not yet PASS. |
+| Next action | Push release-ready revision; participant manually deploys app/dist; independent reviewer and exceptional-PDF tests running |
+| App/build/test status | 8 domain tests pass; browser sample 8 OK / 2 Not provided; PDF 17 pages. Production build PASS (10.97s); production-preview sample flow and storage PASS. |
 | Local Git / latest commit | aed527d pushed to public origin/main at 18:15 |
 | Repository target | `kawsher-hridoy/devfest-kawsherhridoy` — participant confirmed accepted identifier |
-| Deployment | Not deployed/verified; public Vercel static hosting required |
+| Deployment | Participant will deploy manually to public Vercel; agent deployment/login stopped per 18:28 user instruction. Live not verified. |
 | Custom domain | Not supplied; Vercel URL first, never guess or modify another domain |
-| External blockers | Vercel device authorization pending participant approval; no custom domain requested |
+| External blockers | Await participant live URL/source SHA for public verification; no custom domain requested |
 | Source evidence | Full statement/rulebook/sample inspected; sample hashes/page counts and scanned declaration verified |
 
 ### Requirement completion checklist
@@ -83,16 +83,16 @@ Only mark an item checked when it is implemented **and** tested; add its evidenc
 - [x] M8 — Correct English cover, ordered complete pages, non-overlapping footers, required download filename.
 - [x] M9 — Complete Bangla/English interface, responsive and keyboard usable.
 - [x] B1 — Index and correct starting-page numbers, including pagination offsets.
-- [ ] B2 — PNG stamp on chosen pages with preview and position/size controls.
+- [x] B2 — PNG stamp on chosen pages with preview and position/size controls.
 - [x] B3 — Correctly escaped UTF-8 CSV checklist download.
 - [x] B4 — IndexedDB save/reopen including original PDF bytes and project state.
 - [x] B5 — Visually correct Bangla PDF index text.
 - [ ] B6 — Reviewable filename auto-match suggestions with collision safety.
 - [x] B7 — Damaged/password-protected files fail safely and clearly.
-- [ ] B8 — Optional runtime-key AI help; real-provider result separately verified or explicitly not verified.
+- [x] B8 — Optional runtime-key AI help; real-provider result separately verified or explicitly not verified.
 - [x] A1 — Actual resolved sample saved to `output/T-2026-0417_Package.pdf` and visually checked.
 - [x] A2 — Required status screenshots saved under `screenshots/`.
-- [ ] A3 — README, MIT LICENSE, third-party notices, source, lockfile complete.
+- [x] A3 — README, MIT LICENSE, third-party notices, source, lockfile complete.
 - [ ] A4 — At least three compliant commits, timely pushes, no secrets/history rewriting.
 - [ ] A5 — Public HTTPS deployment checked in fresh browser and source SHA matches.
 - [ ] A6 — Independent retest complete; defects fixed or honestly recorded before freeze.
@@ -106,6 +106,8 @@ Append concise rows at each milestone. Distinguish source inspection, automated 
 | 2026-10-06 18:08:45 +06 (+0600) | Planning/source inspection | Full PDF text + rendered source pages; sample `pdfinfo`, SHA-256, visual scan review | Sample oracle established; not an application PASS | Implement and test the full plan |
 | 18:18–18:27 Dhaka | M1–M9; B1/B3/B4/B5/B7; A1/A2 | `npm test`; actual Chrome sample flow; PDF download, pdfinfo/pdftotext/render; save/reload/reopen; bilingual 1440/768/390 | 8 tests pass; sample 8 OK, 2 Not provided; 17 pages and expected starts; shaped Bangla index visually checked; 10 files restored; no viewport overflow; expired blocks/equality OK; duplicates disabled; damaged/encrypted rejected; invalid import preserves workspace | Build not yet complete; stamp/AI and independent review pending |
 | 18:27 Dhaka | Organizer preservation / Git | SHA-256 manifest; public repo API; first compliant commit push | All original organizer hashes unchanged; public repo created and aed527d pushed | At least two more commits and matching Vercel production deployment |
+| 18:30–18:37 Dhaka | B2/B8 / production build / docs | actual stamp PDF and visual page3; composition change; npm run build; fresh Chrome production preview; mocked AI403 and IndexedDB readback | stamp only selected pages; stale pages cleared; bundled production build 10.97s; sample PDF 17pages; storage10files; AI error leaves counts unchanged; key absent from save; README/MIT/notices present | Gemini real-provider not verified; participant deployment required |
+| 18:38 Dhaka | Independent review | read-only reviewer spawned per handoff | Reviewer inspecting current code and running own tests, not yet complete | Review findings and exceptional PDF fixtures |
 
 ### Release and independent-review handoff
 
