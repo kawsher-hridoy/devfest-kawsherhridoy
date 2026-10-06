@@ -10,7 +10,7 @@ This is the active instruction block for the released **Tender Document Package 
 ### Clock and scope
 
 - Participant reports that coding has started; do not remain in preparation/setup mode.
-- Working final freeze: **approximately 19:05, 6 October 2026, Asia/Dhaka**. This is a conservative estimate from the participant's remaining-time statement, **not independently organizer-confirmed**.
+- Original final freeze was **19:05, 6 October 2026, Asia/Dhaka**. Participant subsequently reported an organizer extension and five minutes remaining before the 19:25:30 clock check. Use **19:30** as a conservative documentation/release safety cutoff; the precise organizer deadline and extension scope are not independently confirmed. Never restart this remaining-time window.
 - Participant-updated development/feature freeze: **18:50**, final freeze **19:05** on 6 October 2026 Asia/Dhaka. This update supersedes older 18:35 development targets in the preserved plan. Earlier organizer deadlines still override it.
 - Check the actual clock at the start of each milestone. Planning time has already consumed part of development; never reset the timer on an agent handoff.
 - An earlier organizer-confirmed deadline overrides this working estimate. The printed 15:30–17:30 event window is not sufficient to infer the updated live deadline.
@@ -56,17 +56,17 @@ This is the active instruction block for the released **Tender Document Package 
 
 | Field | Current value |
 |---|---|
-| Last updated | 2026-10-06 18:46 Dhaka |
-| Current phase | All M1–M9 and B1–B8 implemented with scoped local evidence; final Git release; manual deployment outstanding |
+| Last updated | 2026-10-06 19:27 Dhaka |
+| Current phase | Public sites and sample workflow verified; README-only release update during participant-reported extension |
 | Implementation owner | Codex implementation agent |
 | Review owner | Read-only reviewer attempted but provider rate-limited; independent retest NOT complete |
-| Next action | Participant deploys latest main; provide live URL/SHA, independent reviewer retests; stop all changes on submission or freeze |
+| Next action | Push documentation-only commit; confirm matching Vercel source SHA, then participant submits; no source features or post-submission changes |
 | App/build/test status | 9 domain tests pass; browser sample 8 OK / 2 Not provided; PDF 17 pages. Production build PASS (3.67s); production-preview sample flow and storage PASS. |
-| Local Git / latest commit | e85a9b7 pushed 18:38; three compliant commits present; PDF blank-page repair pending next push |
+| Local Git / latest commit | dd11c03 pushed and verified on origin/main; app unchanged; documentation update pending next commit |
 | Repository target | `kawsher-hridoy/devfest-kawsherhridoy` — participant confirmed accepted identifier |
-| Deployment | Participant will deploy manually to public Vercel; agent deployment/login stopped per 18:28 user instruction. Live not verified. |
-| Custom domain | Not supplied; Vercel URL first, never guess or modify another domain |
-| External blockers | Await participant live URL/source SHA for public verification; no custom domain requested |
+| Deployment | Participant manually deployed; both HTTPS URLs public. GitHub production deployment 6884522920 records source dd11c03; deployed JS/CSS match verified build. New documentation revision matching must be checked. |
+| Custom domain | Participant supplied tenderready.hridoy.xyz; public HTTPS verified. Backup tenderready-one.vercel.app. |
+| External blockers | Full independent review and real-provider AI success not verified. Registration number and final portal submission remain participant responsibilities. |
 | Source evidence | Full statement/rulebook/sample inspected; sample hashes/page counts and scanned declaration verified |
 
 ### Requirement completion checklist
@@ -110,6 +110,9 @@ Append concise rows at each milestone. Distinguish source inspection, automated 
 | 18:38 Dhaka | Independent review | read-only reviewer spawned per handoff | Reviewer inspecting current code and running own tests, not yet complete | Review findings and exceptional PDF fixtures |
 | 18:39–18:41 Dhaka | M8 regression / exceptional pages | Production-preview derivative: portrait,90/180/270 rotation,CropBox,blank; annotation derivative; actual downloads and rendered pages | Blank page initially failed; repaired by preserving truly blank page without embedding missing content; 8-page derivative now generates; visible annotation retained; footer bands separate | Independent reviewer errored due provider rate limit; participant/manual reviewer still needed |
 | 18:42–18:46 Dhaka | B6 / final regression / artifacts | actual suggestion acceptance, CSV download, no-index PDF, bilingual viewports; npm test/build; final PDF download/render | 2 license candidates require acceptance; date remains needed; CSV BOM10rows/8OK2NotProvided; no-index16pages; 6 viewport/language combos no overflow or unnamed buttons; __proto__ assignment defect reproduced and fixed; 9tests PASS; build3.67s; final sample17pages and visually shaped index | Public Vercel/source SHA and independent review not verified; participant deployment/submission required |
+
+| 19:17–19:18 Dhaka | Public deployment / live workflow | curl HTTPS; SHA-256 JS/CSS comparison; fresh Chrome JSON import + multi-PDF flow; live PDF page/footer assertions | Both hosts HTTP200/TLS valid; assets match local build; 8OK2NotProvided; live17page PDF/all footers; blockers/duplicate prevention; save restores10files; Bangla390px no overflow; no uncaught errors | Full independent review not complete; submission not observed |
+| 19:27 Dhaka | Extended README-only release | Participant extension report; current GitHub deployment API; README content/required-section checks | Existing production deployment source dd11c03 confirmed; actual URLs and verified evidence added; long AI relay/model wording replaced by required concise tool/prompt disclosure; app source untouched | Push new docs commit, confirm production source matches, stop by19:30 or submission |
 
 ### Release and independent-review handoff
 
