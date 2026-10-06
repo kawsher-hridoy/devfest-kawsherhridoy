@@ -47,9 +47,9 @@ Import the public repository, branch `main`:
 
 ## Verified evidence
 
-- Eight domain test groups pass: status branches, strict dates/imports, assignments and duplicate groups, count/decimal-byte boundaries, sample and multi-index offsets, CSV escaping, stamp ranges, restored-state validation.
+- Nine domain test groups pass: status branches, strict dates/imports, assignments and duplicate groups, count/decimal-byte boundaries, sample and multi-index offsets, CSV escaping, stamp ranges, restored-state validation, and prototype-like requirement IDs.
 - Actual Chrome sample workflow: **8 OK, 2 Not provided, no blockers**.
-- Production build completed in **10.97 seconds** with bundled matching PDF.js worker. Rollup tree-shaking is disabled to avoid pathological build analysis; direct Lucide icon imports limit unnecessary icon code.
+- Final production build completed in **3.67 seconds** with bundled matching PDF.js worker. Rollup tree-shaking is disabled to avoid pathological build analysis; direct Lucide icon imports limit unnecessary icon code.
 - Production-preview sample generation, save/reload/reopen: 10 uploaded PDFs restored.
 - Actual downloaded `output/T-2026-0417_Package.pdf`: **17 pages**, correct indexed starts 3,4,5,6,7,9,15,17. Cover, Bangla index and scanned final page visually checked.
 - Both languages at 1440/768/390px: no horizontal overflow. Screenshots are in `screenshots/`.

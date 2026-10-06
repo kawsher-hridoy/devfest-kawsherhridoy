@@ -34,7 +34,7 @@ export function canAssign(p:Project,rid:string,fid:string){const f=p.files.find(
 export function assign(p:Project,rid:string,fid:string):Project {
  if(!p.requirements.some(r=>r.id===rid))throw Error('invalidJSON');
  if(fid&&!canAssign(p,rid,fid))throw Error('alreadyAssigned');
- const assignments={...p.assignments};if(fid)assignments[rid]={fileId:fid,expiryDate:''};else delete assignments[rid];
+ const assignments:Record<string,Assignment>=Object.assign(Object.create(null),p.assignments);if(fid)assignments[rid]={fileId:fid,expiryDate:''};else delete assignments[rid];
  return {...p,assignments,options:{...p.options,stamp:p.options.stamp?{...p.options.stamp,pages:''}:undefined}};
 }
 export function removeFile(p:Project,id:string):Project {

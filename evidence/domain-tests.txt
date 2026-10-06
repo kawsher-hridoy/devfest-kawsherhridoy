@@ -1,0 +1,59 @@
+
+> tenderready@1.0.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: all exact status branches and optional supplied blocks
+ok 1 - all exact status branches and optional supplied blocks
+  ---
+  duration_ms: 8.771802
+  ...
+# Subtest: strict calendar and JSON validation + numeric stable sort
+ok 2 - strict calendar and JSON validation + numeric stable sort
+  ---
+  duration_ms: 1.267862
+  ...
+# Subtest: assign replace unassign remove; three-copy hash prevention; same name distinct bytes
+ok 3 - assign replace unassign remove; three-copy hash prevention; same name distinct bytes
+  ---
+  duration_ms: 5.456769
+  ...
+# Subtest: decimal byte and count boundaries count duplicates
+ok 4 - decimal byte and count boundaries count duplicates
+  ---
+  duration_ms: 7.821645
+  ...
+# Subtest: sample oracle and multi-index offsets
+ok 5 - sample oracle and multi-index offsets
+  ---
+  duration_ms: 2.876368
+  ...
+# Subtest: UTF8 CSV quotes formula protection Bangla and all optional rows
+ok 6 - UTF8 CSV quotes formula protection Bangla and all optional rows
+  ---
+  duration_ms: 1.299574
+  ...
+# Subtest: stamp ranges and invalid values
+ok 7 - stamp ranges and invalid values
+  ---
+  duration_ms: 0.66965
+  ...
+# Subtest: restored state validates bytes and duplicate assignments
+ok 8 - restored state validates bytes and duplicate assignments
+  ---
+  duration_ms: 1.050836
+  ...
+# Subtest: arbitrary string IDs do not collide with object prototypes
+ok 9 - arbitrary string IDs do not collide with object prototypes
+  ---
+  duration_ms: 0.59704
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 734.523669
