@@ -2,9 +2,9 @@
 
 A private, bilingual tender document package builder for AI DevFest 2026.
 
-**Participant:** Kawsher Hridoy  
-**Accepted registration identifier:** `kawsherhridoy`  
-**Repository:** https://github.com/kawsher-hridoy/devfest-kawsherhridoy  
+**Participant:** Kawsher Hridoy
+**Accepted registration identifier:** `kawsherhridoy`
+**Repository:** https://github.com/kawsher-hridoy/devfest-kawsherhridoy
 **Live HTTPS URL:** Pending participant's manual Vercel deployment. No live PASS is claimed.
 
 ## Run and build
@@ -54,6 +54,7 @@ Import the public repository, branch `main`:
 - Actual downloaded `output/T-2026-0417_Package.pdf`: **17 pages**, correct indexed starts 3,4,5,6,7,9,15,17. Cover, Bangla index and scanned final page visually checked.
 - Both languages at 1440/768/390px: no horizontal overflow. Screenshots are in `screenshots/`.
 - Old-license Expired status blocks; deadline equality is OK; identical sibling assignment is disabled; damaged/password-protected PDFs are rejected individually; invalid JSON preserves current work.
+- Portrait, 90/180/270-degree rotations, non-zero CropBox, blank page and visible annotation sample derivatives generated and visually checked. A discovered blank-page embedding defect was fixed.
 - Stamp on pages 3 and 17 generated successfully; page 3 visually checked. Changing matches clears stale target pages.
 - Mocked AI authentication failure leaves statuses unchanged; saved workspace contains no test API key. **Real-provider success has not been verified.**
 
@@ -69,7 +70,7 @@ Expect 15 source pages, 17 with cover/index, 16 without index. No filename or re
 
 All PDF processing and persistent workspaces remain on this browser/device. No document bytes, names, tender details or personal data go to AI. Optional Gemini sends only explicitly consented anonymous counts and language; keys are held in React memory only, not saved/logged. Offline/local main functionality does not need Gemini.
 
-- Public Vercel access, deployed revision matching, portal submission and truly independent review remain **not verified** until performed by the participant/reviewer.
+- Public Vercel access, deployed revision matching, portal submission and truly independent review remain **not verified** (reviewer attempt hit provider rate limit) until performed by the participant/reviewer.
 - No real API key supplied, so live Gemini success is **not verified**.
 - Not a PDF-signature verification system; composition does not retain cryptographic signature validity. Visible annotations/forms are rendered when needed; source content remains in display order.
 - Bangla PDF text is rendered as shaped images and is not selectable/searchable. Screen-reader PDF tagging is not implemented.
@@ -83,7 +84,7 @@ React + TypeScript + Vite, PDF-LIB 1.17.1, PDF.js 5.4.624 and matching bundled w
 
 Original organizer files are preserved. All project source was freshly created during this active implementation.
 
-**AI tools:** Codex via Airouter, DeepSeek V4 Flash.  
+**AI tools:** Codex via Airouter, DeepSeek V4 Flash.
 **Useful prompt:** “Read AGENT.md and plan.md completely; implement M1–M9 mandatory first, then B1–B8; verify 8 OK, 2 Not provided and the actual 17-page browser-generated sample; preserve organizer files and never claim PASS without evidence.”
 
 MIT license for application code. See `THIRD_PARTY_NOTICES.md` for dependency/font licenses. Organizer samples retain their supplied contest-use notice.

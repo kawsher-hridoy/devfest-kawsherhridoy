@@ -56,13 +56,13 @@ This is the active instruction block for the released **Tender Document Package 
 
 | Field | Current value |
 |---|---|
-| Last updated | 2026-10-06 18:38 Dhaka |
+| Last updated | 2026-10-06 18:42 Dhaka |
 | Current phase | Mandatory sample flow verified locally; bonus and production checks in progress |
 | Implementation owner | Codex implementation agent |
-| Review owner | Independent reviewing agent after implementation handoff |
+| Review owner | Read-only reviewer attempted but provider rate-limited; independent retest NOT complete |
 | Next action | Push release-ready revision; participant manually deploys app/dist; independent reviewer and exceptional-PDF tests running |
 | App/build/test status | 8 domain tests pass; browser sample 8 OK / 2 Not provided; PDF 17 pages. Production build PASS (10.97s); production-preview sample flow and storage PASS. |
-| Local Git / latest commit | aed527d pushed to public origin/main at 18:15 |
+| Local Git / latest commit | e85a9b7 pushed 18:38; three compliant commits present; PDF blank-page repair pending next push |
 | Repository target | `kawsher-hridoy/devfest-kawsherhridoy` — participant confirmed accepted identifier |
 | Deployment | Participant will deploy manually to public Vercel; agent deployment/login stopped per 18:28 user instruction. Live not verified. |
 | Custom domain | Not supplied; Vercel URL first, never guess or modify another domain |
@@ -93,7 +93,7 @@ Only mark an item checked when it is implemented **and** tested; add its evidenc
 - [x] A1 — Actual resolved sample saved to `output/T-2026-0417_Package.pdf` and visually checked.
 - [x] A2 — Required status screenshots saved under `screenshots/`.
 - [x] A3 — README, MIT LICENSE, third-party notices, source, lockfile complete.
-- [ ] A4 — At least three compliant commits, timely pushes, no secrets/history rewriting.
+- [x] A4 — At least three compliant commits, timely pushes, no secrets/history rewriting.
 - [ ] A5 — Public HTTPS deployment checked in fresh browser and source SHA matches.
 - [ ] A6 — Independent retest complete; defects fixed or honestly recorded before freeze.
 
@@ -108,6 +108,7 @@ Append concise rows at each milestone. Distinguish source inspection, automated 
 | 18:27 Dhaka | Organizer preservation / Git | SHA-256 manifest; public repo API; first compliant commit push | All original organizer hashes unchanged; public repo created and aed527d pushed | At least two more commits and matching Vercel production deployment |
 | 18:30–18:37 Dhaka | B2/B8 / production build / docs | actual stamp PDF and visual page3; composition change; npm run build; fresh Chrome production preview; mocked AI403 and IndexedDB readback | stamp only selected pages; stale pages cleared; bundled production build 10.97s; sample PDF 17pages; storage10files; AI error leaves counts unchanged; key absent from save; README/MIT/notices present | Gemini real-provider not verified; participant deployment required |
 | 18:38 Dhaka | Independent review | read-only reviewer spawned per handoff | Reviewer inspecting current code and running own tests, not yet complete | Review findings and exceptional PDF fixtures |
+| 18:39–18:41 Dhaka | M8 regression / exceptional pages | Production-preview derivative: portrait,90/180/270 rotation,CropBox,blank; annotation derivative; actual downloads and rendered pages | Blank page initially failed; repaired by preserving truly blank page without embedding missing content; 8-page derivative now generates; visible annotation retained; footer bands separate | Independent reviewer errored due provider rate limit; participant/manual reviewer still needed |
 
 ### Release and independent-review handoff
 
